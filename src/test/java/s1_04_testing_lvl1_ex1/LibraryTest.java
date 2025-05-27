@@ -68,16 +68,16 @@ class LibraryTest {
     void testDeleteBookDecreasesSize() throws Exception {
         library.addBook(book1);
         library.addBook(book2);
-        library.deleteBookByTitle("El Quijote");
+        library.deleteBookByTitle("El robot completo");
         assertEquals(1, library.getBooks().size());
         assertEquals("1984", library.getBooks().get(0).getTitle());
     }
 
     @Test
     void testBookListAlphabeticalOrder() {
-        library.addBook(book2); // 1984
-        library.addBook(book3); // Cien años de soledad
-        library.addBook(book1); // El Quijote
+        library.addBook(book2);
+        library.addBook(book3);
+        library.addBook(book1);
 
         List<Book> books = library.getBooks();
         for (int i = 0; i < books.size() - 1; i++) {
@@ -85,6 +85,13 @@ class LibraryTest {
             String next = books.get(i + 1).getTitle();
             assertTrue(current.compareToIgnoreCase(next) <= 0, "Unordered list");
         }
+    }
+
+    @Test
+    void testGetBookTitleThrowsExceptionIfInvalidIndex() {
+        assertThrows(Exception.class, () -> {
+            library.getBookTitleAtIndex(99); // índice inválido
+        });
     }
 }
 
