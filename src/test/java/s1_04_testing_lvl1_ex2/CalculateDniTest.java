@@ -18,7 +18,7 @@ public class CalculateDniTest {
     void testLetterMatchWithGivenNumber() {
         num = newMatchLetter.getNum();
         dniLetter = newMatchLetter.getDniLetter() = newMatchLetter.getLettersList().charAt(num);
-        assertTrue(dniLetter == newMatchLetter.getLettersList().charAt(num), "Correct letter obtained: ");
+        assertSame(dniLetter, newMatchLetter.getLettersList().charAt(num), "Correct letter obtained: ");
     }
 
 
