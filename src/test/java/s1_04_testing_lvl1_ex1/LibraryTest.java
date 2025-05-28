@@ -36,16 +36,16 @@ class LibraryTest {
     void testBookAtCorrectPosition() throws Exception {
         library.addBook(book1);
         library.addBook(book2);
-        assertEquals("1984", library.getBookTitleAtIndex(1));
+        assertEquals("Los desposeídos", library.getBookTitleAtIndex(1));
     }
 
     @Test
     void testNoDuplicateTitles() {
         library.addBook(book1);
-        library.addBook(new Book("El robot completo", "Another autor"));
+        library.addBook(new Book("Los desposeídos", "Another autor"));
         long count = library.getBooks().stream()
                 .map(Book::getTitle)
-                .filter(title -> title.equals("El robot completo"))
+                .filter(title -> title.equals("Los desposeídos"))
                 .count();
         assertEquals(1, count, "Duplicators not allowed");
     }
@@ -53,7 +53,7 @@ class LibraryTest {
     @Test
     void testGetBookTitleByIndex() throws Exception {
         library.addBook(book1);
-        assertEquals("El robot completo", library.getBookTitleAtIndex(0));
+        assertEquals("Los desposeídos", library.getBookTitleAtIndex(0));
     }
 
     @Test
@@ -61,14 +61,14 @@ class LibraryTest {
         assertEquals(0, library.getBooks().size());
         library.addBook(book1);
         assertEquals(1, library.getBooks().size());
-        assertEquals("El robot completo", library.getBooks().get(0).getTitle());
+        assertEquals("Los desposeídos", library.getBooks().get(0).getTitle());
     }
 
     @Test
     void testDeleteBookDecreasesSize() throws Exception {
         library.addBook(book1);
         library.addBook(book2);
-        library.deleteBookByTitle("El robot completo");
+        library.deleteBookByTitle("Los desposeídos");
         assertEquals(1, library.getBooks().size());
         assertEquals("1984", library.getBooks().get(0).getTitle());
     }
