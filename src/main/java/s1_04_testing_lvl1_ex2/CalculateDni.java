@@ -1,9 +1,9 @@
 package s1_04_testing_lvl1_ex2;
 
 public class CalculateDni {
-    int num;
-    String lettersList = "";
-    char dniLetter;
+    private int num;
+    private String lettersList = "";
+    private char dniLetter;
 
     public CalculateDni(int num) {
         this.num = num;
@@ -23,11 +23,14 @@ public class CalculateDni {
     }
 
     public char matchNumWithDniLetter(int num) {
-        numToMatch = num;
-        if(numToMatch >= 25 && numToMatch <= 0) {
-            this.dniLetter = this.getLettersList().charAt(num);
+        for (int i = 0; i <= lettersList.length(); i++) {
+            dniLetter = lettersList.charAt(num);
         }
         return  dniLetter;
+    }
+
+    public char getDniLetter() {
+        return dniLetter;
     }
 
     public String toString() {
