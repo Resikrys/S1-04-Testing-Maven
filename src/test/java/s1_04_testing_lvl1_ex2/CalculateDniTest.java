@@ -10,7 +10,14 @@ class CalculateDniTest {
     @CsvSource({
             "12345678, Z",
             "11111111, H",
-            "22222222, M"
+            "22222222, J",
+            "98765432, M",
+            "87654321, X",
+            "13579135, G",
+            "24680246, G",
+            "10000000, Z",
+            "20000000, M",
+            "30000000, L"
     })
     void testDniLetterCalculator(int num, char assignedLetter) {
         CalculateDni calc = new CalculateDni(num);
