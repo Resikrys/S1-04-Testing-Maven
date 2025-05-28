@@ -28,6 +28,12 @@ Verify its correct operation with JUnit:
   or removing a book.
 
 ### LEVEL 1 - EXERCISE 2
+Create a class called CalculoDni that calculates the letter of the 
+DNI when receiving the number as a parameter.
+Create a jUnit class that verifies its correct operation, 
+parameterizing it so that the test receives a wide spectrum of data 
+and validates whether the calculation is correct for 10 predefined 
+DNI numbers.
 
 ### LEVEL 1 - EXERCISE 3
 
