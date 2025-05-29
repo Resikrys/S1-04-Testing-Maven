@@ -36,13 +36,18 @@ and validates whether the calculation is correct for 10 predefined
 DNI numbers.
 
 ### LEVEL 1 - EXERCISE 3
+Create a class with a method that throws an 
+ArrayIndexOutOfBoundsException.
+Verify its correct operation with a jUnit test.
 
 ### TECHNOLOGIES
-| Package        | Version | Description                |
-|----------------|--------|----------------------------|
-| `java`         | ^1.8.0_441 | Principal project language |
-| `Apache maven` | ^4.0.0 | Project management tool    |
-| `java.util`    | ^1.8.0_441 | Java standard library      |
+| Package                    | Version | Description                |
+|----------------------------|---------|----------------------------|
+| `java`                     | ^24.0.1 | Principal project language |
+| `Apache maven`             | ^4.0.0  | Project management tool    |
+| `java.util`                | ^24.0.1 | Java standard library      |
+| `org.junit.jupiter.api`    | ^5.13.0 | Java standard library      |
+| `org.junit.jupiter.params` | ^5.13.0 | Java standard library      |
 
 ### REQUIREMENTS
 Local environment: `IntelliJ or Eclipse`
