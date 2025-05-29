@@ -90,7 +90,7 @@ class LibraryTest {
     @Test
     void testGetBookTitleThrowsExceptionIfInvalidIndex() {
         assertThrows(Exception.class, () -> {
-            library.getBookTitleAtIndex(99); // índice inválido
+            library.getBookTitleAtIndex(99);
         });
     }
 }

@@ -24,7 +24,6 @@ public class Library {
         bookList.sort((b1, b2) -> b1.getTitle().compareToIgnoreCase(b2.getTitle()));
     }
 
-    //get book title at specific [i]
     public String getBookTitleAtIndex(int target) throws Exception {
         if (target >= 0 && target < bookList.size()) {
             return bookList.get(target).getTitle();
@@ -33,7 +32,6 @@ public class Library {
         }
     }
 
-    //add book at specific [i]
     public void addBookAtIndex(int index, Book book) throws Exception {
         if (index >= 0 && index <= bookList.size()) {
             bookList.add(index, book);
